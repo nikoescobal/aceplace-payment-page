@@ -8,6 +8,7 @@
 body {
   background: #E5E5E5;
   font-family: Inter, sans-serif;
+  height: 100vh;
 }
 
 .nav-wrapper {
@@ -62,6 +63,31 @@ body {
   width: 24px;
   height: 24px;
   border-radius: 40px;
+}
+
+.main-wrapper {
+  display: flex;
+  height: 100%;
+  justify-content: center;
+  vertical-align: middle;
+  text-align: center;
+  align-items: center;
+}
+
+.grid-wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  height: 540px;
+  width: 700px;
+}
+
+.grid-item {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  height: 100%;
+  vertical-align: middle;
 }
 
 @media only screen and (max-width : 768px) {
