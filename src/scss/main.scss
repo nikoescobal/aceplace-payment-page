@@ -1,13 +1,32 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap');
 
-$green: #038D91;
-$black: #21232D;
-$gray: #C1C4C9;
-$blue: blue;
-
+// Fonts
 $font-stack: Inter,
 sans-serif;
 
+// Colors
+$green: #038D91;
+$black: #21232D;
+$gray: #C1C4C9;
+
+// Media Queries
+$media-desktop: "only screen and (max-width : 1024px)";
+$media-tablet: "only screen and (max-width : 768px)";
+$media-mobile: "only screen and (max-width : 600px)";
+$media-mobile-sm: "only screen and (max-width : 480px)";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #E5E5E5;
+  font-family: $font-stack;
+}
+
+// Mixins
 @mixin flex-center {
   display: flex;
   align-items: center;
@@ -16,30 +35,29 @@ sans-serif;
   text-align: center;
 }
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
+// Nav
 .nav-wrapper {
   @include flex-center;
   padding: 16px 30px;
   background: white;
+  font-family: Inter;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 24px;
+  letter-spacing: 0em;
+  text-align: left;
 }
 
 .nav-right {
   @include flex-center;
+  color: $green;
   gap: 6px;
 
   .nav-item {
     @include flex-center;
     gap: 6px;
   }
-}
-
-.flex {
-  display: flex;
 }
 
 .divider {
@@ -49,64 +67,64 @@ sans-serif;
 }
 
 .circle {
-  @include flex-center;
   text-align: center;
   background-color: $green;
   color: white;
-  padding: 2px 8px;
+  width: 24px;
+  height: 24px;
   border-radius: 40px;
 }
 
-body {
-  background: #E5E5E5;
-  font-family: $font-stack;
+@media #{$media-tablet} {
+  .nav-wrapper {
+    font-size: 14px;
+    line-height: 20px;
+    padding: 12px 24px;
+  }
+
+  .divider {
+    @include flex-center;
+    color: $gray;
+    padding: 0 20px;
+  }
+
+  .circle {
+    text-align: center;
+    background-color: $green;
+    color: white;
+    width: 20px;
+    height: 20px;
+    border-radius: 40px;
+  }
+
+  .logo {
+    width: 80%;
+  }
 }
 
-.flex {
-  display: flex;
-}
+@media #{$media-mobile} {
+  .nav-wrapper {
+    font-size: 8.5px;
+    line-height: 16px;
+    padding: 10px 12px;
+  }
 
-.justify-between {
-  justify-content: space-between;
-}
+  .divider {
+    @include flex-center;
+    color: $gray;
+    padding: 0 3px;
+  }
 
-.bg-white {
-  background: white;
-}
+  .circle {
+    text-align: center;
+    background-color: $green;
+    color: white;
+    width: 18px;
+    height: 18px;
+    border-radius: 40px;
+  }
 
-.green {
-  color: $green;
-}
-
-.bg-green {
-  background: $green;
-}
-
-.align-center {
-  align-items: center;
-}
-
-.space-x-3 {
-  margin-left: 0.875rem;
-}
-
-// .nav-padding {
-//   padding: 2px 7px;
-// }
-
-.p-2 {
-  padding: 8px;
-}
-
-.py-2 {
-  padding: 8px 0;
-
-}
-
-.px-4 {
-  padding: 0 16px;
-}
-
-.p-4 {
-  padding: 16px;
+  .logo-wrapper {
+    width: 40%;
+  }
 }
