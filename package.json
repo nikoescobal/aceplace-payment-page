@@ -4,8 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "parcel src/index.html --open --no-cache",
-    "build": "parcel build src/index.html"
+    "dev": "parcel src/main.html --open --no-cache -o dist/index.html",
+    "build": "parcel build src/main.html -o dist/index.html"
   },
   "keywords": [],
   "author": "",

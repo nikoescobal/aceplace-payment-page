@@ -1,7 +1,112 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap');
+
 $pink: pink;
-$teal: teal;
+$green: #038D91;
+$black: #21232D;
+$gray: #C1C4C9;
 $blue: blue;
+$font-stack: Inter,
+sans-serif;
+
+@mixin flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  vertical-align: middle;
+  text-align: center;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.nav-wrapper {
+  @include flex-center;
+  padding: 16px 30px;
+  background: white;
+}
+
+.nav-right {
+  @include flex-center;
+  gap: 6px;
+
+  .nav-item {
+    @include flex-center;
+    gap: 6px;
+  }
+}
+
+.flex {
+  display: flex;
+}
+
+.divider {
+  @include flex-center;
+  color: $gray;
+  padding: 0 26px;
+}
+
+.circle {
+  @include flex-center;
+  text-align: center;
+  background-color: $green;
+  color: white;
+  padding: 2px 8px;
+  border-radius: 40px;
+}
 
 body {
   background: $pink;
+  font-family: $font-stack;
+}
+
+.flex {
+  display: flex;
+}
+
+.justify-between {
+  justify-content: space-between;
+}
+
+.bg-white {
+  background: white;
+}
+
+.green {
+  color: $green;
+}
+
+.bg-green {
+  background: $green;
+}
+
+.align-center {
+  align-items: center;
+}
+
+.space-x-3 {
+  margin-left: 0.875rem;
+}
+
+// .nav-padding {
+//   padding: 2px 7px;
+// }
+
+.p-2 {
+  padding: 8px;
+}
+
+.py-2 {
+  padding: 8px 0;
+
+}
+
+.px-4 {
+  padding: 0 16px;
+}
+
+.p-4 {
+  padding: 16px;
 }
