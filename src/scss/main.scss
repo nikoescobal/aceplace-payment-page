@@ -301,6 +301,7 @@ body {
 
 .date {
   @include mid-title;
+  padding: 1px 0 4px;
 }
 
 @media #{$media-tablet} {
