@@ -12,11 +12,10 @@
 
 1. Open Terminal.
 2. Navigate to your desired location to download the contents of this repository.
-3. Run  `git clone https://github.com/nikoescobal/sass-parcel-template`
-4. Run  `cd sass-parcel-template`
-5. Run `npm install` or `npm i`
-6. Run `npm run dev` and start building!
-7. The http://localhost:1234/ server will automatically open in your browser
+3. Run  `git clone https://github.com/nikoescobal/aceplace-payment-page`
+4. Run `npm install` or `npm i`
+5. Run `npm run dev` and start building!
+6. The http://localhost:1234/ server will automatically open in your browser
 
 ## Authors:
   
@@ -32,7 +31,7 @@
 Contributions, issues and feature requests are welcome!
 
 
-Feel free to check the [issues page](https://github.com/nikoescobal/sass-parcel-template/issues).
+Feel free to check the [issues page](https://github.com/nikoescobal/aceplace-payment-page/issues).
 ## Show your support
 
 Give a ⭐️ if you like this project!

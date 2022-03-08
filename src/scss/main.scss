@@ -32,6 +32,7 @@ body {
 }
 
 // Mixins
+
 @mixin flex-center {
   display: flex;
   align-items: center;
@@ -75,7 +76,7 @@ body {
   line-height: 24px;
   letter-spacing: 0em;
   text-align: left;
-  margin-bottom: 30px;
+  // margin-bottom: 30px;
 }
 
 .nav-right {
@@ -87,6 +88,10 @@ body {
     @include flex-center;
     gap: 6px;
   }
+}
+
+.top-left {
+  padding-left: 8px;
 }
 
 .divider {
@@ -107,7 +112,7 @@ body {
 .main-wrapper {
   @include flex-wrapper;
   height: 100%;
-  padding: 40px;
+  padding: 80px 10px 10px;
 }
 
 .grid-wrapper {
@@ -118,7 +123,6 @@ body {
 }
 
 .grid-item {
-  display: flex;
   text-align: left;
   align-items: center;
   height: 100%;
@@ -126,7 +130,7 @@ body {
 }
 
 .grid-item1 {
-  position: relative;
+  // position: relative;
   background: white;
   height: 100%;
 }
@@ -134,7 +138,6 @@ body {
 .grid-left {
   width: 100%;
   height: 50%;
-  padding: 0 24px;
 }
 
 .image-left {
@@ -142,49 +145,44 @@ body {
   border-radius: 6px 6px 0 0;
 }
 
+.payment-text {
+  padding: 0 3px 0 19px;
+}
+
 .first-text {
-  position: absolute;
-  height: 22px;
-  left: 25px;
-  top: 72px;
-  font-style: normal;
   font-weight: 500;
   font-size: 18px;
   line-height: 22px;
+  padding: 6px 0;
   color: #02B058;
 }
 
 .second-text {
-  position: absolute;
-  height: 16px;
-  left: 26px;
-  top: 102px;
-  font-style: normal;
-  font-weight: normal;
+  padding: 6px 0;
   font-size: 12px;
   line-height: 16px;
-  color: #797979;
+  color: $dark-gray;
 }
 
 .grid-top-left {
   width: 100%;
-  position: absolute;
-  left: 0%;
-  right: 50%;
-  top: 0%;
-  bottom: 78.15%;
+  // position: absolute;
+  // left: 0%;
+  // right: 50%;
+  // top: 0%;
+  // bottom: 78.15%;
   background: linear-gradient(180deg, rgba(0, 199, 98, 0.1) 0%, rgba(255, 255, 255, 0.1) 102.27%);
 }
 
 
 .grid-item2 {
   @include flex-wrapper;
-  position: relative;
+  // position: relative;
   background: #393E48;
 }
 
 .card-background {
-  position: relative;
+  // position: relative;
   width: 100%;
   object-fit: contain;
   object-position: center;
@@ -192,6 +190,7 @@ body {
 }
 
 .card-content {
+  z-index: 2;
   font-weight: 500;
   text-align: left;
   font-style: normal;
@@ -202,10 +201,10 @@ body {
 
 .btn-blue {
   color: $black;
-  position: absolute;
-  top: 143px;
+  // position: absolute;
+  // top: 143px;
   z-index: 3;
-  left: 70px;
+  // left: 70px;
   padding: 4px 12px;
   background: #E1EBFF;
   border-radius: 34px;
@@ -217,29 +216,41 @@ body {
 }
 
 .badge-wrapper {
-  position: absolute;
-  width: 36px;
-  height: 36px;
-  left: 24px;
-  top: 24px;
+  display: inline-flex;
+  margin: 0 10px;
+  // display: flex;
+  // padding: 8px;
+  // width: 11%;
+  // justify-content: flex-start;
+  // position: absolute;
+  // width: 36px;
+  // height: 36px;
+  // left: 24px;
+  // top: 24px;
   background: #FFFFFF;
   box-shadow: 0px 1.22034px 2.44068px rgba(6, 71, 62, 0.12);
   border-radius: 28.0678px;
 }
 
 .badge {
-  position: absolute;
-  left: 19.44%;
-  right: 19.44%;
-  top: 19.42%;
-  bottom: 18.04%;
+  padding: 4px 6px;
+
+  // display: flex;
+  // justify-content: center;
+  // position: absolute;
+  // left: 19.44%;
+  // right: 19.44%;
+  // top: 19.42%;
+  // bottom: 18.04%;
 }
 
 .grid-mid-left {
   width: 100%;
+  padding: 0 18px;
 }
 
 .grid-right {
+  // position: relative;
   background: #FFFFFF;
   box-shadow: 0px 2px 4px rgba(6, 71, 62, 0.12);
   border-radius: 6px;
@@ -250,6 +261,7 @@ body {
 .title {
   font-size: 14px;
   line-height: 20px;
+  font-weight: 500;
   color: $dark-gray;
 }
 
@@ -265,7 +277,7 @@ body {
 
 .text-mid {
   border-bottom: 1px solid $light-gray;
-  padding: 9px 0;
+  padding: 12px 0 15px 0;
 
   .subtitle {
     @include mid-title;
@@ -278,6 +290,7 @@ body {
 }
 
 .link-wrapper {
+  // position: relative;
   margin: 22px 0;
   color: white;
   font-weight: 500;
@@ -300,7 +313,7 @@ body {
   background-color: $green;
   z-index: 99;
   border-radius: 4px;
-  margin-top: 50px;
+  margin: 30px 18px;
   padding: 13px 40px;
   color: white;
   font-weight: 600;
@@ -321,8 +334,17 @@ body {
     padding: 12px 24px;
   }
 
+  .first-text {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 20px;
+    padding: 4px 0;
+    color: #02B058;
+  }
+
+
   .card-background {
-    position: relative;
+    // position: relative;
     width: 100%;
     object-fit: contain;
     object-position: center;
@@ -331,9 +353,9 @@ body {
 
   .btn-blue {
     color: $black;
-    position: absolute;
-    top: 144px;
-    left: 34px;
+    // position: absolute;
+    // top: 144px;
+    // left: 34px;
     z-index: 2;
     padding: 2px 4px;
     background: #E1EBFF;
@@ -364,25 +386,25 @@ body {
     width: 80%;
   }
 
-  .title {
-    font-size: 12px;
-    line-height: 16px;
-    color: $dark-gray;
-  }
+  // .title {
+  //   font-size: 12px;
+  //   line-height: 16px;
+  //   color: $dark-gray;
+  // }
 
-  .subheading {
-    font-size: 16px;
-    line-height: 22px;
+  // .subheading {
+  //   font-size: 16px;
+  //   line-height: 22px;
 
-    .price {
-      font-size: 22px;
-      line-height: 26px;
-    }
-  }
+  //   .price {
+  //     font-size: 22px;
+  //     line-height: 26px;
+  //   }
+  // }
 
   .text-mid {
     border-bottom: 1px solid $light-gray;
-    padding: 5px 0;
+    padding: 12px 0 15px 0;
 
     .subtitle {
       @include mid-title;
@@ -439,34 +461,37 @@ body {
   }
 
   .first-text {
-    font-size: 9px;
-    top: 66px;
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 18px;
+    padding: 4px 0;
   }
 
   .second-text {
-    font-size: 9px;
-    top: 89px;
+    padding: 3px 0;
+    font-size: 10px;
+    line-height: 14px;
   }
 
-  .title {
-    font-size: 9px;
-    line-height: 13px;
-    color: $dark-gray;
-  }
+  // .title {
+  //   font-size: 9px;
+  //   line-height: 13px;
+  //   color: $dark-gray;
+  // }
 
-  .subheading {
-    font-size: 9px;
-    line-height: 12px;
+  // .subheading {
+  //   font-size: 9px;
+  //   line-height: 12px;
 
-    .price {
-      font-size: 11px;
-      line-height: 14px;
-    }
-  }
+  //   .price {
+  //     font-size: 11px;
+  //     line-height: 14px;
+  //   }
+  // }
 
   .text-mid {
     border-bottom: 1px solid $light-gray;
-    padding: 3px 0;
+    padding: 12px 0 15px 0;
 
     .subtitle {
       @include mid-title;
@@ -485,7 +510,7 @@ body {
   .button {
     background-color: $green;
     border-radius: 4px;
-    margin-top: 40px;
+    margin: 30px 18px;
     padding: 10px 25px;
     color: white;
     font-weight: 600;
@@ -498,7 +523,7 @@ body {
   .grid-left {
     width: 100%;
     height: 40%;
-    padding: 0 24px;
+    // padding: 0 24px;
   }
 
   .card-content {
@@ -517,6 +542,7 @@ body {
   }
 
   .grid-right {
+    // position: relative;
     background: #FFFFFF;
     box-shadow: 0px 2px 4px rgba(6, 71, 62, 0.12);
     border-radius: 6px;
@@ -527,14 +553,14 @@ body {
   .main-wrapper {
     @include flex-wrapper;
     height: 100%;
-    padding: 10px;
+    padding: 12px;
   }
 
   .btn-blue {
     color: $black;
-    position: absolute;
-    top: 82px;
-    left: 92px;
+    // position: absolute;
+    // top: 82px;
+    // left: 92px;
     z-index: 2;
     padding: 2px 4px;
     background: #E1EBFF;
@@ -547,7 +573,8 @@ body {
   }
 
   .card-background {
-    position: relative;
+    display: flex;
+    // position: absolute;
     width: 100%;
     object-fit: contain;
     object-position: center;
@@ -557,12 +584,12 @@ body {
   .grid-wrapper {
     display: grid;
     grid-template-columns: 1fr;
-    height: 540px;
-    width: 700px;
+    // height: 540px;
+    // width: 700px;
   }
 
   .grid-item1 {
-    position: relative;
+    // position: relative;
     background: white;
     height: 400px;
   }
@@ -575,7 +602,7 @@ body {
     text-align: center;
     align-items: center;
     display: flex;
-    position: relative;
+    // position: relative;
     background: #393E48;
     // margin-bottom: 20px;
   }
