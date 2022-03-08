@@ -1,11 +1,10 @@
-# Sass-parcel template
-> Template to help make it easy to start a project with Sass and parcel enabled with quick auto-refresh.
+# Aceplace Payment Page
+> A pixel perfect copy of the Aceplace payment page.
 
 ## Built with
 - HTML
 - Sass
 - Parcel
-
 ## Getting Started
 
 **To get this project set up on your local machine, follow these steps:**
