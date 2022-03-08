@@ -3,19 +3,38 @@
 // Fonts
 $font-stack: Inter,
 sans-serif;
+$font-bold: 500;
+$font-medium: 12px;
+$font-regular: 14px;
+
 
 // Colors
 $green: #038D91;
+$light-green: #02B058;
 $black: #21232D;
+$white: #FFFFFF;
 $gray: #C1C4C9;
 $light-gray: #EEF0F1;
 $dark-gray: #797979;
+$background: #393E48;
+$primary-background: #E5E5E5;
+$secondary-background: #E1EBFF;
+
+
+// General
+$w-full: 100%;
+$h-full: 100%;
+$line-height-small: 16px;
+$line-height-medium: 18px;
+$line-height-tall: 24px;
+$align-center: center;
+
 
 // Media Queries
-$media-desktop: "only screen and (max-width : 1024px)";
-$media-tablet: "only screen and (max-width : 768px)";
-$media-mobile: "only screen and (max-width : 600px)";
-$media-mobile-sm: "only screen and (max-width : 480px)";
+$media-desktop: "only screen and (max-width :1024px)";
+$media-tablet: "only screen and (max-width :768px)";
+$media-mobile: "only screen and (max-width :600px)";
+$media-mobile-sm: "only screen and (max-width :480px)";
 
 * {
   margin: 0;
@@ -24,16 +43,16 @@ $media-mobile-sm: "only screen and (max-width : 480px)";
 }
 
 body {
-  background: #E5E5E5;
+  background: $primary-background;
   font-family: $font-stack;
-  height: 100%;
-  width: 100%;
+  height: $h-full;
+  width: $w-full;
 }
 
 // Mixins
 @mixin flex-center {
   display: flex;
-  align-items: center;
+  align-items: $align-center;
   justify-content: space-between;
   vertical-align: middle;
   text-align: center;
@@ -41,24 +60,23 @@ body {
 
 @mixin flex-wrapper {
   display: flex;
-  height: 100%;
+  height: $h-full;
   justify-content: center;
   vertical-align: middle;
   text-align: center;
-  align-items: center;
+  align-items: $align-center;
 }
 
 @mixin mid-title {
-  font-style: normal;
-  font-weight: 500;
-  font-size: 12px;
-  line-height: 16px;
+  font-weight: $font-bold;
+  font-size: $font-medium;
+  line-height: $line-height-small;
   color: $dark-gray;
 }
 
 @mixin mid-text {
   font-size: 16px;
-  line-height: 24px;
+  line-height: $line-height-tall;
   color: $black;
 }
 
@@ -66,12 +84,10 @@ body {
 .nav-wrapper {
   @include flex-center;
   padding: 16px 30px;
-  background: white;
-  font-family: Inter;
   font-size: 16px;
-  font-style: normal;
-  font-weight: 500;
-  line-height: 24px;
+  font-weight: $font-bold;
+  ;
+  line-height: $line-height-tall;
   letter-spacing: 0em;
   text-align: left;
 }
@@ -100,7 +116,7 @@ body {
 .circle {
   text-align: center;
   background-color: $green;
-  color: white;
+  color: $white;
   width: 24px;
   height: 24px;
   border-radius: 40px;
@@ -108,7 +124,7 @@ body {
 
 .main-wrapper {
   @include flex-wrapper;
-  height: 100%;
+  height: $h-full;
   padding: 80px 10px 10px;
 }
 
@@ -117,30 +133,30 @@ body {
   grid-template-columns: 1fr 1fr;
   height: 540px;
   width: 700px;
-  background: #FFFFFF;
+  background: $white;
   box-shadow: 0px 2px 4px rgba(6, 71, 62, 0.12);
   border-radius: 6px;
 }
 
 .grid-item {
   text-align: left;
-  align-items: center;
-  height: 100%;
+  align-items: $align-center;
+  height: $h-full;
   vertical-align: middle;
 }
 
 .grid-item1 {
-  background: white;
-  height: 100%;
+  background: $white;
+  height: $h-full;
 }
 
 .grid-left {
-  width: 100%;
+  width: $w-full;
   height: 50%;
 }
 
 .image-left {
-  width: 100%;
+  width: $w-full;
   border-radius: 6px 6px 0 0;
 }
 
@@ -149,35 +165,35 @@ body {
 }
 
 .first-text {
-  font-weight: 500;
+  font-weight: $font-bold;
+  ;
   font-size: 18px;
   line-height: 22px;
   padding: 6px 0;
-  color: #02B058;
+  color: $light-green;
 }
 
 .second-text {
   padding: 6px 0;
-  font-size: 12px;
-  line-height: 16px;
+  line-height: $line-height-small;
   color: $dark-gray;
 }
 
 .grid-top-left {
-  width: 100%;
+  width: $w-full;
   background: linear-gradient(180deg, rgba(0, 199, 98, 0.1) 0%, rgba(255, 255, 255, 0.1) 102.27%);
 }
 
 
 .grid-item2 {
   @include flex-wrapper;
-  background: #393E48;
+  background: $background;
 }
 
 .card-background {
   background: url('../assets/card-background.svg') no-repeat;
   background-size: cover;
-  width: 100%;
+  width: $w-full;
   height: 152px;
   border-top-right-radius: 6px;
   border-top-left-radius: 6px;
@@ -186,7 +202,8 @@ body {
 
 .card-content {
   z-index: 2;
-  font-weight: 500;
+  font-weight: $font-bold;
+  ;
   text-align: left;
   padding: 6px 16px;
   line-height: 20px;
@@ -197,11 +214,11 @@ body {
   color: $black;
   z-index: 3;
   padding: 4px 12px;
-  background: #E1EBFF;
+  background: $secondary-background;
   border-radius: 34px;
-  font-weight: 500;
-  font-size: 12px;
-  line-height: 16px;
+  font-weight: $font-bold;
+  font-size: $font-medium;
+  line-height: $line-height-small;
   text-align: center;
   display: inline-block;
   float: left;
@@ -210,7 +227,7 @@ body {
 .badge-wrapper {
   display: inline-flex;
   margin: 0 10px;
-  background: #FFFFFF;
+  background: $white;
   box-shadow: 0px 1.22034px 2.44068px rgba(6, 71, 62, 0.12);
   border-radius: 28.0678px;
 }
@@ -220,32 +237,33 @@ body {
 }
 
 .grid-mid-left {
-  width: 100%;
+  width: $w-full;
   padding: 0 18px;
 }
 
 .grid-right {
-  background: #FFFFFF;
+  background: $white;
   box-shadow: 0px 2px 4px rgba(6, 71, 62, 0.12);
   border-radius: 6px;
-  width: 100%;
+  width: $w-full;
   margin: 0 57px;
   width: 236px;
   height: 276px;
 }
 
 .title {
-  font-size: 14px;
+  font-size: $font-regular;
   line-height: 20px;
-  font-weight: 500;
+  font-weight: $font-bold;
+  ;
   color: $dark-gray;
 }
 
 .subheading {
   font-size: 20px;
   line-height: 26px;
-  // letter-spacing: -1px;
-  font-weight: 500;
+  font-weight: $font-bold;
+  ;
 
   .price {
     font-size: 32px;
@@ -269,17 +287,17 @@ body {
 
 .link-wrapper {
   margin: 22px 0;
-  color: white;
-  font-weight: 500;
-  line-height: 16px;
-  font-size: 12px;
+  color: $white;
+  font-weight: $font-bold;
+  ;
+  line-height: $line-height-small;
+  font-size: $font-medium;
 
   .link {
     text-align: center;
-    color: white;
+    color: $white;
   }
 }
-
 
 .border-none {
   border: none;
@@ -291,10 +309,10 @@ body {
   border-radius: 4px;
   margin: 24px;
   padding: 13px 40px;
-  color: white;
+  color: $white;
   font-weight: 600;
-  font-size: 14px;
-  line-height: 24px;
+  font-size: $font-regular;
+  line-height: $line-height-tall;
   border: none;
   cursor: pointer;
 }
@@ -306,25 +324,25 @@ body {
 
 @media #{$media-tablet} {
   .nav-wrapper {
-    font-size: 14px;
+    font-size: $font-regular;
     line-height: 19px;
     padding: 12px 24px;
   }
 
   .first-text {
-    font-weight: 500;
+    font-weight: $font-bold;
+    ;
     font-size: 16px;
     line-height: 20px;
     padding: 4px 0;
-    color: #02B058;
+    color: $light-green;
   }
 
 
   .card-background {
     background: url('../assets/card-background.svg') no-repeat;
     background-size: cover;
-    width: 100%;
-    // height: 152px;
+    width: $w-full;
     border-top-right-radius: 6px;
     border-top-left-radius: 6px;
     padding: 8px;
@@ -334,9 +352,9 @@ body {
     color: $black;
     z-index: 2;
     padding: 2px 4px;
-    background: #E1EBFF;
+    background: $secondary-background;
     border-radius: 34px;
-    font-weight: 500;
+    font-weight: $font-bold;
     font-size: 8px;
     line-height: 11px;
     text-align: center;
@@ -353,7 +371,7 @@ body {
   .circle {
     text-align: center;
     background-color: $green;
-    color: white;
+    color: $white;
     width: 20px;
     height: 20px;
     border-radius: 40px;
@@ -385,10 +403,10 @@ body {
     background-color: $green;
     border-radius: 4px;
     padding: 10px 23px;
-    color: white;
+    color: $white;
     font-weight: 600;
-    font-size: 12px;
-    line-height: 18px;
+    font-size: $font-medium;
+    line-height: $line-height-medium;
     border: none;
     cursor: pointer;
   }
@@ -398,7 +416,7 @@ body {
 @media #{$media-mobile} {
   .nav-wrapper {
     font-size: 9.5px;
-    line-height: 18px;
+    line-height: $line-height-medium;
     padding: 10px 12px;
   }
 
@@ -411,7 +429,7 @@ body {
   .circle {
     text-align: center;
     background-color: $green;
-    color: white;
+    color: $white;
     width: 18px;
     height: 18px;
     border-radius: 40px;
@@ -422,9 +440,10 @@ body {
   }
 
   .first-text {
-    font-weight: 500;
+    font-weight: $font-bold;
+    ;
     font-size: 15px;
-    line-height: 18px;
+    line-height: $line-height-medium;
     padding: 4px 0;
   }
 
@@ -457,7 +476,7 @@ body {
     border-radius: 4px;
     margin: 30px 18px;
     padding: 10px 25px;
-    color: white;
+    color: $white;
     font-weight: 600;
     font-size: 10px;
     line-height: 12px;
@@ -466,26 +485,28 @@ body {
   }
 
   .grid-left {
-    width: 100%;
+    width: $w-full;
     height: 40%;
   }
 
   .card-content {
-    font-weight: 500;
+    font-weight: $font-bold;
+    ;
     text-align: left;
     padding: 6px 8px;
     line-height: 14px;
-    font-size: 12px;
+    font-size: $font-medium;
   }
 
   .date {
-    font-weight: 500;
+    font-weight: $font-bold;
+    ;
     font-size: 9px;
     line-height: 11px;
   }
 
   .grid-right {
-    background: #FFFFFF;
+    background: $white;
     box-shadow: 0px 2px 4px rgba(6, 71, 62, 0.12);
     border-radius: 6px;
     width: 190px;
@@ -494,7 +515,7 @@ body {
 
   .main-wrapper {
     @include flex-wrapper;
-    height: 100%;
+    height: $h-full;
     padding: 12px;
   }
 
@@ -502,9 +523,9 @@ body {
     color: $black;
     z-index: 2;
     padding: 2px 4px;
-    background: #E1EBFF;
+    background: $secondary-background;
     border-radius: 34px;
-    font-weight: 500;
+    font-weight: $font-bold;
     font-size: 8px;
     line-height: 11px;
     text-align: center;
@@ -515,7 +536,7 @@ body {
   .card-background {
     background: url('../assets/card-background.svg') no-repeat;
     background-size: cover;
-    width: 100%;
+    width: $w-full;
     height: 152px;
     border-top-right-radius: 6px;
     border-top-left-radius: 6px;
@@ -528,8 +549,7 @@ body {
   }
 
   .grid-item1 {
-    background: white;
-    // height: 400px;
+    background: $white;
   }
 
   .grid-item2 {
@@ -538,8 +558,8 @@ body {
     justify-content: center;
     vertical-align: middle;
     text-align: center;
-    align-items: center;
+    align-items: $align-center;
     display: flex;
-    background: #393E48;
+    background:$background;
   }
 }

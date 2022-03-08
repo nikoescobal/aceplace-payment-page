@@ -5,7 +5,9 @@
   "main": "index.js",
   "scripts": {
     "dev": "parcel src/main.html --open --no-cache -o dist/index.html",
-    "build": "parcel build src/main.html -o dist/index.html"
+    "build": "parcel build src/main.html -o dist/index.html",
+    "dev-extra": "parcel src/extra.html --open --no-cache -o dist/extra.html",
+    "build-extra": "parcel build src/extra.html -o dist/extra.html"
   },
   "keywords": [],
   "author": "",
