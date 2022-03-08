@@ -26,7 +26,6 @@ $media-mobile-sm: "only screen and (max-width : 480px)";
 body {
   background: #E5E5E5;
   font-family: $font-stack;
-  box-shadow: 0px 2px 4px rgba(6, 71, 62, 0.12);
   height: 100%;
   width: 100%;
 }
@@ -118,6 +117,9 @@ body {
   grid-template-columns: 1fr 1fr;
   height: 540px;
   width: 700px;
+  background: #FFFFFF;
+  box-shadow: 0px 2px 4px rgba(6, 71, 62, 0.12);
+  border-radius: 6px;
 }
 
 .grid-item {
@@ -186,8 +188,7 @@ body {
   z-index: 2;
   font-weight: 500;
   text-align: left;
-  font-style: normal;
-  padding: 10px 16px;
+  padding: 6px 16px;
   line-height: 20px;
   font-size: 16px;
 }
@@ -199,7 +200,6 @@ body {
   background: #E1EBFF;
   border-radius: 34px;
   font-weight: 500;
-  font-style: normal;
   font-size: 12px;
   line-height: 16px;
   text-align: center;
@@ -244,6 +244,8 @@ body {
 .subheading {
   font-size: 20px;
   line-height: 26px;
+  // letter-spacing: -1px;
+  font-weight: 500;
 
   .price {
     font-size: 32px;
@@ -269,7 +271,6 @@ body {
   margin: 22px 0;
   color: white;
   font-weight: 500;
-  font-style: normal;
   line-height: 16px;
   font-size: 12px;
 
@@ -335,7 +336,6 @@ body {
     background: #E1EBFF;
     border-radius: 34px;
     font-weight: 500;
-    font-style: normal;
     font-size: 8px;
     line-height: 11px;
     text-align: center;
@@ -472,7 +472,6 @@ body {
   .card-content {
     font-weight: 500;
     text-align: left;
-    font-style: normal;
     padding: 6px 8px;
     line-height: 14px;
     font-size: 12px;
@@ -505,7 +504,6 @@ body {
     background: #E1EBFF;
     border-radius: 34px;
     font-weight: 500;
-    font-style: normal;
     font-size: 8px;
     line-height: 11px;
     text-align: center;
